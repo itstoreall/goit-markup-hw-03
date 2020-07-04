@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 :root {
   --primary-font: "Roboto", sans-serif;
   --secondery-font: "Raleway", sans-serif;
@@ -79,6 +89,12 @@ body {
   color: var(--accent-color);
 }
 
+.auth-nav .link-icon {
+  display: inline-block;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+
 /* Hero */
 .hero-title {
   font-weight: 900;
@@ -156,6 +172,17 @@ body {
   background-color: var(--accent-color);
 }
 
+.hero .button {
+  display: inline-block;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  letter-spacing: 0.06em;
+  padding: 10px, 32px;
+  border: none;
+  border-radius: 4px;
+}
+
 /* Footer */
 
 .address .text {
@@ -190,7 +217,7 @@ body {
   color: var(--accent-color);
 }
 
-/* portfolio */
+/* Portfolio */
 
 .portfolio-list .title {
   font-size: 18px;
