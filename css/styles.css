@@ -29,8 +29,9 @@ body {
 }
 
 .container {
-  width: 1200px;
+  padding: 0 15px;
   margin: 0 auto;
+  width: 1200px;
 }
 
 /* a {
@@ -38,6 +39,8 @@ body {
 } */
 
 .list {
+  padding: 0;
+  margin: 0;
   list-style: none;
 }
 
@@ -57,7 +60,7 @@ body {
   text-decoration: none;
 }
 
-.logo .header {
+.logo .primary-color {
   color: #000000;
 }
 
@@ -100,14 +103,43 @@ body {
   vertical-align: middle;
 }
 
+/* Main */
+
+.main > .section:nth-last-child(2) {
+  background-color: #f5f4fa;
+}
+
+/* Section  */
+
+.section {
+  padding: 94px 0;
+}
+
+.section-title {
+  margin: 0 0 50px 0;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+
+/* .section.bg-color {
+  background-color: #f5f4fa;
+} */
+
 /* Hero */
+
+.hero {
+  text-align: center;
+}
+
 .hero-title {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+  margin: 0 0 30px 0;
   color: var(--primary-white-color);
 }
 
@@ -121,16 +153,14 @@ body {
   border-radius: 4px;
 }
 
-/* Section  */
-.section-title {
-  font-size: 36px;
-  line-height: 1.17;
-  text-align: center;
-  color: var(--secondary-text-color);
+/* Feature */
+
+.feature-list .image {
+  margin: 0 0 30px 0;
 }
 
-/* Feature */
 .feature-list .title {
+  margin: 0 0 10px 0;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
@@ -189,36 +219,45 @@ body {
 
 /* Footer */
 
-.address .text {
-  font-style: normal;
+.footer {
+  padding: 60px 0;
+  background-color: #2f303a;
 }
 
-.address span {
-  font-style: normal;
+.footer .logo {
+  display: inline-block;
+  margin: 0 0 20px 0;
+}
+
+.logo .secondary-color {
   color: var(--primary-white-color);
 }
 
-.footer .title {
+.address-list .list-item:nth-child(-n + 2) {
+  margin: 0 0 9px 0;
+}
+
+.address-list .secondary-color {
+  color: var(--primary-white-color);
+}
+
+.address-list .link {
+  font-style: normal;
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* .address-list .link:hover,
+.address-list .link:focus {
+  color: var(--accent-color);
+} */
+
+.footer .sub-title {
+  margin: 0 0 20px 0;
   font-weight: 700;
-  font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--primary-white-color);
-}
-
-.logo .footer {
-  color: var(--primary-white-color);
-}
-
-.address .link {
-  font-style: normal;
-  text-decoration: none;
-  color: var(--primary-text-color);
-}
-
-.address .link:hover,
-.address .link:focus {
-  color: var(--accent-color);
 }
 
 /* Portfolio */
