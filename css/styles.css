@@ -29,8 +29,10 @@ body {
 }
 
 .container {
-  padding: 0 15px;
-  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
   width: 1200px;
 }
 
@@ -50,6 +52,20 @@ body {
 /* Акцент #2196F3 */
 /* Должности rgba(255, 255, 255, 0.6) */
 
+/* Main nav */
+
+.container.main-nav {
+  display: flex;
+  align-items: center;
+}
+
+/* Main nav */
+
+.main-nav {
+  display: flex;
+  align-items: center;
+}
+
 /* Logo */
 .logo {
   font-family: var(--secondery-font);
@@ -65,7 +81,25 @@ body {
 }
 
 /* Site nav */
+
+.site-nav {
+  display: flex;
+  margin-left: 85px;
+}
+
+.site-nav .item:not(:last-child) {
+  margin-right: 50px;
+}
+
+/* .site-nav .item + .item {
+  margin-left: 50px;
+} */
+
 .site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
   color: var(--secondary-text-color);
   font-weight: 500;
   font-size: 14px;
@@ -81,6 +115,17 @@ body {
 
 .site-nav .link.current {
   color: var(--accent-color);
+}
+
+/* Auth-nav */
+
+.auth-nav {
+  display: flex;
+  margin-left: auto;
+}
+
+.auth-nav .item + .item {
+  margin-left: 30px;
 }
 
 .auth-nav .link {
@@ -103,20 +148,22 @@ body {
   vertical-align: middle;
 }
 
-/* Main */
+/* Page main */
 
-.main > .section:nth-last-child(2) {
-  background-color: #f5f4fa;
+.page-main > .section:nth-last-child(2) {
+  background-color: var(--secondary-white-color);
 }
 
 /* Section  */
 
 .section {
-  padding: 94px 0;
+  padding-top: 94px;
+  padding-bottom: 94px;
 }
 
 .section-title {
-  margin: 0 0 50px 0;
+  margin-top: 0;
+  margin-bottom: 50px;
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
@@ -129,21 +176,26 @@ body {
 
 /* Hero */
 
-.hero {
+.section-hero {
+  padding-top: 200px;
+  padding-bottom: 200px;
+  margin-bottom: 94px;
   text-align: center;
+  background-color: var(--primary-text-color);
 }
 
 .hero-title {
+  margin-top: 0;
+  margin-bottom: 30px;
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
   letter-spacing: 0.06em;
   text-transform: uppercase;
-  margin: 0 0 30px 0;
   color: var(--primary-white-color);
 }
 
-.hero .button {
+.section-hero .button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -155,21 +207,50 @@ body {
 
 /* Feature */
 
-.feature-list .image {
-  margin: 0 0 30px 0;
+.section-feature {
+  margin-bottom: 94px;
+}
+
+.feature-list {
+  display: flex;
+}
+
+.feature-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.icon-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+  height: 120px;
+  border-radius: 4px;
+  background-color: var(--secondary-white-color);
 }
 
 .feature-list .title {
-  margin: 0 0 10px 0;
+  margin-top: 0;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 1.14;
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
 
+.feature-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* Exemples */
-.work-list .title {
-  color: var(--secondary-text-color);
+
+.section-exemples {
+  margin-bottom: 94px;
+}
+
+.exemples-list {
+  display: flex;
 }
 
 .exemples-list .title {
@@ -181,7 +262,26 @@ body {
 }
 
 /* Team */
+
+.team-list {
+  display: flex;
+}
+
+.team-list .item {
+  font-size: 0;
+  background-color: #fff;
+}
+.team-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.team-photo {
+  margin-bottom: 30px;
+}
+
 .team-list .title {
+  margin-top: 0;
+  margin-bottom: 10px;
   font-weight: 500;
   font-size: 16px;
   line-height: 1.19;
@@ -190,9 +290,41 @@ body {
 }
 
 .team-list .text {
+  margin-top: 0;
+  margin-bottom: 16px;
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+}
+
+.social-list {
+  display: flex;
+}
+
+/* Clients */
+
+.clients-list {
+  display: flex;
+}
+
+.clients-list .item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 90px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+
+.clients-list .item:not(:last-child) {
+  margin-right: 30px;
+}
+
+.clients-list .logo {
+  font-size: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* Button */
@@ -206,27 +338,38 @@ body {
   background-color: var(--accent-color);
 }
 
-.button.secondary {
+.button.filter {
+  padding-top: 6px;
+  padding-right: 22px;
+  padding-bottom: 6px;
+  padding-left: 22px;
+
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  letter-spacing: 0.03em;
+  border: 0;
+  border-radius: 4px;
   color: var(--secondary-text-color);
   background-color: var(--secondary-white-color);
 }
 
-.button.secondary:hover,
-.button.button.secondary:focus {
+.button.filter:hover,
+.button.filter:focus {
   color: var(--primary-white-color);
   background-color: var(--accent-color);
 }
 
-/* Footer */
+/* Page footer */
 
-.footer {
+.page-footer {
   padding: 60px 0;
   background-color: #2f303a;
 }
 
-.footer .logo {
+.page-footer .logo {
   display: inline-block;
-  margin: 0 0 20px 0;
+  margin-bottom: 20px;
 }
 
 .logo .secondary-color {
@@ -234,7 +377,7 @@ body {
 }
 
 .address-list .list-item:nth-child(-n + 2) {
-  margin: 0 0 9px 0;
+  margin-bottom: 9px;
 }
 
 .address-list .secondary-color {
@@ -260,9 +403,43 @@ body {
   color: var(--primary-white-color);
 }
 
+/* Filter */
+
+.filter-list {
+  display: flex;
+  justify-content: center;
+
+  margin-bottom: 50px;
+}
+
+.filter-list > .item + .item {
+  margin-left: 8px;
+}
+
 /* Portfolio */
 
+.portfolio-list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio-list .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+.portfolio-list .item:nth-child(3n) {
+  margin-right: 0;
+}
+
+.portfolio-list .item:nth-last-child(-n + 3) {
+  margin-bottom: 0;
+}
+
 .portfolio-list .title {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
@@ -274,12 +451,16 @@ body {
 }
 
 .portfolio-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 16px;
   line-height: 1.87;
   color: var(--primary-text-color);
 }
 
 .portfolio-list .hover-text {
+  margin-top: 0;
+  margin-bottom: 0;
   font-size: 18px;
   line-height: 1.56;
   color: var(--primary-white-color);
