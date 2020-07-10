@@ -34,7 +34,7 @@ body {
   font-style: normal;
   font-weight: 400;
   font-size: 14px;
-  line-height: 1.71;
+  line-height: 1.72;
   letter-spacing: 0.03em;
   color: var(--primary-text-color);
   background-color: #ffffff;
@@ -140,9 +140,10 @@ body {
 }
 
 .auth-nav .link {
+  display: block;
   font-weight: 500;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.143;
   letter-spacing: 0.02em;
   color: var(--primary-text-color);
   text-decoration: none;
@@ -172,11 +173,15 @@ body {
   padding-bottom: 94px;
 }
 
+.padding-top-none {
+  padding-top: 0;
+}
+
 .section-title {
   margin-top: 0;
   margin-bottom: 50px;
   font-size: 36px;
-  line-height: 1.17;
+  line-height: 1.16;
   letter-spacing: 0.03em;
   text-align: center;
   color: var(--secondary-text-color);
@@ -184,12 +189,11 @@ body {
 
 /* Hero */
 
-.section-hero {
+.section.hero {
   padding-top: 200px;
   padding-bottom: 200px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 94px;
   max-width: 1600px;
   text-align: center;
   background-color: var(--primary-text-color);
@@ -206,7 +210,7 @@ body {
   color: var(--primary-white-color);
 }
 
-.section-hero .button {
+.section.hero .button {
   font-weight: 700;
   font-size: 16px;
   line-height: 1.87;
@@ -217,10 +221,6 @@ body {
 }
 
 /* Feature */
-
-.section-feature {
-  margin-bottom: 94px;
-}
 
 .feature-list {
   display: flex;
@@ -248,7 +248,7 @@ body {
   margin-top: 0;
   margin-bottom: 10px;
   font-size: 14px;
-  line-height: 1.14;
+  line-height: 1.143;
   text-transform: uppercase;
   color: var(--secondary-text-color);
 }
@@ -259,10 +259,6 @@ body {
 }
 
 /* Exemples */
-
-.section-exemples {
-  margin-bottom: 94px;
-}
 
 .exemples-list {
   display: flex;
@@ -287,8 +283,8 @@ body {
 }
 
 .team-list > .item {
+  padding-bottom: 24px;
   border-radius: 0 0 4px 4px;
-  font-size: 0;
   background-color: #fff;
   box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 1px 3px rgba(0, 0, 0, 0.12);
@@ -298,6 +294,7 @@ body {
 }
 
 .team-photo {
+  display: block;
   margin-bottom: 30px;
 }
 
@@ -320,7 +317,6 @@ body {
 }
 
 .team-list .social-list {
-  margin-bottom: 24px;
   display: flex;
   justify-content: center;
 }
@@ -384,6 +380,7 @@ body {
 }
 
 .button.filter {
+  display: block;
   padding-top: 6px;
   padding-right: 22px;
   padding-bottom: 6px;
@@ -391,7 +388,7 @@ body {
 
   font-weight: 500;
   font-size: 16px;
-  line-height: 1.62;
+  line-height: 1.625;
   letter-spacing: 0.03em;
   border: 0;
   border-radius: 4px;
@@ -410,7 +407,8 @@ body {
 /* Footer */
 
 .page-footer {
-  padding: 60px 0;
+  padding-top: 60px;
+  padding-bottom: 60px;
   background-color: #2f303a;
 }
 
@@ -425,6 +423,7 @@ body {
 .page-footer .logo {
   display: block;
   margin-bottom: 20px;
+  line-height: 1.19;
   letter-spacing: 0.03em;
 }
 
@@ -451,6 +450,7 @@ body {
 }
 
 .footer-list .contacts-text {
+  display: block;
   font-family: Roboto;
   font-style: normal;
   font-weight: normal;
@@ -495,7 +495,6 @@ body {
 .filter-list {
   display: flex;
   justify-content: center;
-
   margin-bottom: 50px;
 }
 
